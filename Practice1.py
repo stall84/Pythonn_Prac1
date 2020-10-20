@@ -74,3 +74,98 @@ print(course[-2])                                       # n
 # Slicing - Start and end indexes required:
 # [start : end] sep'd by colon
 print(course[0:3])                                      # Pyt
+
+# Escape sequences in Python are the same as in other languages : \ (backslash)
+
+print("Hello \"World\"")
+
+# Formatted Strings (use f character) .. you can call any expression/function/method within the brackets
+# very similar to js
+
+fist_name = "Michael"
+last_name = "Stallings"
+full_name = F"{fist_name} {last_name}"
+print(full_name)
+
+###########  USEFUL STRING METHODS  #############
+
+course_2 = "   Python Programming"
+
+# UPPER()
+print(course_2.upper())  # PYTHON PROGRAMMING
+# LOWER()
+print(course_2.lower())  # python programming
+# TITLE()
+print(course_2.title())  # Python Programming
+# STRIP() - removes whitespace from around the string notice the whitespace in course_2 above
+# (also have lstrip for left whitespace and rstrip for right)
+print(course_2.strip())  # Python Programming
+# FIND() - locate index of input - is case sensitive
+print(course_2.find("Pro"))  # 10
+# REPLACE(what,with) - 2 params, obj replacing, obj with to replace - case sensitive
+print(course_2.replace("P", "-"))           # -ython -rogramming
+# IN OPERATOR - really a function call taking the prefix and searching for it in the postfix
+# - returns Boolean, case sensitive - can also be prefixed with NOT keyword to act like ! in js
+print("Programming" in course_2)
+
+
+##########  USEFUL NUMBER METHODS  ##########
+
+# Binary representation with '0b' operator
+d = 0b10  # 0010 in binary is 2
+print("binary rep of 0b10: ", d)
+print(bin(5))  # 0b1101
+# Hexadecimal representation with '0x' operator
+k = 0x12c
+l = 350
+print(k)  # 300 in decimal
+print(hex(l))  # 0x15e
+# In python j represents imaginary number (i) for complex number use
+
+
+###########  ARITHMETIC OPERATORS  ############
+
+# Same as other languages save for:
+ans = 10 / 3                # Will yield a floating point number
+print(ans)                  # 3.33333333333333
+ans_int = 10 // 3            # Yields an integer
+print(ans_int)              # 3
+# Exponents
+ans_exp = 10 ** 3
+print(ans_exp)              # 1000
+# Augmented operators same as other languages
+did = 5
+did += 6                    # same as did = did + 6
+print(did)
+
+
+#############  TYPE CONVERSION  ################
+
+# Convert String to Number
+# Python is strongly typed in that you have to explicitly tell which type to use (Not static typing)
+# In comparison Javascript is Weakly-typed.. and as you know will perform type conversions on it's own
+
+# Example
+# x = input("x: ")
+# y = x + 1
+# Running the above will type error because python doesn't know whether to do a string conversion and yield 11
+# or a number conversion and yield 2
+
+# type conversion functions :
+#  int()
+#  float()
+# bool()
+# string()
+
+k1 = 1
+print(float(k1))
+
+
+############## TRUTHY  FALSIES  $##################
+# FALSY VALUES #
+#  ""  (empty string) #
+#  0  (zero) #
+#  []  (empty list #
+#  None (like null) #
+
+# Everything else is Truthy
