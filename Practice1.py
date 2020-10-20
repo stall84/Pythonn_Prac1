@@ -154,8 +154,8 @@ print(did)
 # type conversion functions :
 #  int()
 #  float()
-# bool()
-# string()
+#  bool()
+#  string()
 
 k1 = 1
 print(float(k1))
@@ -169,3 +169,24 @@ print(float(k1))
 #  None (like null) #
 
 # Everything else is Truthy
+
+########  CONDITIONAL STATEMENTS  ##########
+age = 36
+# No longer need braces, pressing enter after colon will auto-indent
+# Do not mix tabs and spaces. Use 4 spaces in lieu of tabs for Python3
+if age >= 20:
+    print("Adult")
+
+#########  LOGICAL OPERATORS  ########
+# and, or, not
+name_new = ""
+
+if not name_new:
+    print("Name is Empty")
+
+if age >= 18 and age < 65:
+    print("Eligible")
+
+# The above can be written much more cleanly as:
+if 18 <= age < 65:
+    print("Eligible")
