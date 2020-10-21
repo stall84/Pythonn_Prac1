@@ -190,3 +190,86 @@ if age >= 18 and age < 65:
 # The above can be written much more cleanly as:
 if 18 <= age < 65:
     print("Eligible")
+
+noob_age = 19
+if noob_age >= 18:
+    message = "Eligible"
+else:
+    message = "Not Eligible"
+
+
+print(message)
+
+########## TERNARY OPERATOR #############
+# DIFF FROM JAVASCRIPT
+# Far more readable in python
+
+noob1_age = 14
+
+message = "Eligible" if noob1_age >= 18 else "Not eligible"
+print(message)
+
+##########  LOOPS  #################
+
+# Python has just 2 types of loops: FOR and WHILE
+
+for g in "Python":
+    # Python is unique (from javascript/c-languages) in that
+    print(g)
+    # strings are iterable .. You can loop right over their characters
+    # like so. The colon and line indentation serve as brackets would in
+    # c-languages
+
+for u in ['Michael', 'Donny', 'Becca']:
+    print('Name: ', u)
+
+# RANGE FUNCTION
+# RETURNS A RANGE-OBJECT (DOES NOT RETURN A LIST)
+# for q in range(10):                     # Prints 0,1,2,3,4,5,6,7,8,9
+#     print(q)
+# Step modifier of Range
+# for p in range(0, 10, 2):               # Prints 0, 2, 4, 6, 8, 10
+#     print(p)
+
+##############  EXAMPLE CONTROL FLOW PROBS  ##############
+
+# Find all names that start with 'J' using for-else loop
+# For-Else will execute the else statement if nothing is found in the foor loop
+# Similar to setting a value to true or false (flag) in c-language
+names_list = ['Stephen', 'Carlton', 'James', 'Frederick', 'Jules']
+
+for name in names_list:
+    if name.startswith('K'):
+        print('Found')
+        break
+else:
+    print('Not Found')
+
+############  WHILE-LOOPS  ###############
+
+# guessing game will prompt user for input till correct match
+# guess = 0
+# answer = 5
+
+# while answer != guess:
+#     # input returns a string so type-convert to int
+#     guess = int(input('Guess: '))
+
+
+###########  FUNCTIONS  ##############
+
+# Functions in Python start with 'def' keyword for defining
+# Once again the colon and 4 space indentation replace brackets
+def funcname(parameter_list):
+    pass
+# Above is function signtature in python
+# Below let's make a function to increment an input number
+
+
+# Python allows returning multiple values
+def incrementer(number, by):
+    # out of a single function
+    return (number, number + by)
+
+
+print('Increment Function Output: ', incrementer(3, 5))
