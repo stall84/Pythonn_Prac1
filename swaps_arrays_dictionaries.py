@@ -121,3 +121,27 @@ for key in point2:
 # x 3
 # y 55
 # z 105
+
+
+############  DICTIONARY COMPREHENSIONS  #############
+######################################################
+
+#  To review the signature for (List) Comprehension:
+#  [expression for item in items] where we iterate over an iterable (items) and for each item
+#  we do something to it (expression)
+values = []
+for x in range(5):
+    values.append(x * 2)
+
+print('Values: ', values)
+# Values:  [0, 2, 4, 6, 8]
+#  ^^^ To Transform to a comprehension:
+values_compd = [x * 2 for x in range(5)]
+print('Compd Values: ', values_compd)
+# Compd Values:  [0, 2, 4, 6, 8]
+# Of note you can use comprehensions with sets by using curly braces {expression for item in items}
+# you can also use comprehensions for dictionaries, also by utilizing curly braces
+
+compd_dic = {x: x * 2 for x in range(5)}
+print('Compd Dic: ', compd_dic)
+# Compd Dic:  {0: 0, 1: 2, 2: 4, 3: 6, 4: 8}

@@ -4,7 +4,7 @@
 
 # Start functions with keyword def
 # In python you can return multiple values as long as they're
-# enclosed in parent and sep'd by comma
+# enclosed in parenthesis and sep'd by comma
 # default values can be defined for parameters. In example below, if no argument is
 # given at function call.. it will default to incrementing by 1
 def incrementer(number, by=1):
