@@ -26,3 +26,13 @@ for x in values_gen:
 values_big_gen = (x * 2 for x in range(1000))
 print('big generator size: ', getsizeof(values_big_gen))
 # prints  big generator size:  112 (bytes)
+
+
+########  UNPACKING OPERATOR  ########
+######################################
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# Using print(numbers) is going to return/print a list [1, 2, 3...].
+# However if you want just the individual elements without brackets for list use Unpacking operator asterisk *
+# This essentially functions the same as SPREAD operator in javascript
+print('Unpacked numbers list: ', *numbers)
