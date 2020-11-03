@@ -36,3 +36,13 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # However if you want just the individual elements without brackets for list use Unpacking operator asterisk *
 # This essentially functions the same as SPREAD operator in javascript
 print('Unpacked numbers list: ', *numbers)
+# prints  Unpacked numbers list:  1 2 3 4 5 6 7 8 9 10
+
+# Lists can be combined with unpacking operator
+first_nums = [50, 100, 150, 200, 250]
+second_nums = [1000, 2000, 3000, 4000, 5000]
+combd_lists = [*first_nums, *second_nums]
+print('Combd Lists: ', combd_lists)
+# prints  Combd Lists:  [50, 100, 150, 200, 250, 1000, 2000, 3000, 4000, 5000]
+
+# Can also unpack dictionaries
