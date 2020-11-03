@@ -29,6 +29,12 @@ class Point:
     def draw(self):
         print(F"Point ({self.x}, {self.y})")
 
+    # defining a Class-level method (available to all classes the same way (not instance))
+    # use classmethod decorator to define class-level method
+    @classmethod
+    def zero(cls):
+        return cls(0, 0)
+
 
 # Object instantiation. Rather than using 'new' keyword as in other langs, simply assign the
 # object to a function-call of the parent Class
