@@ -68,3 +68,5 @@ greeting()
 
 ##  DEBUGGING ##
 # In vs-code .. same as other languages, set a breakpoint and open panel
+
+## Made some changes to notes
