@@ -214,9 +214,8 @@ print(message)
 # Python has just 2 types of loops: FOR and WHILE
 
 for g in "Python":
-    # Python is unique (from javascript/c-languages) in that
     print(g)
-    # strings are iterable .. You can loop right over their characters
+    # Strings are iterable in Python, like in JS.. You can loop right over their characters
     # like so. The colon and line indentation serve as brackets would in
     # c-languages
 
