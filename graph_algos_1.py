@@ -11,6 +11,7 @@ graph_adjacency_list = {
 
 
 def dft_iterative_printer(graph: dict, origin: str) -> None:
+    print('Running the Depth First Traverse Iterative Function...')
     # Initiate the stack as a List
     stack = []
     # You could just place the origin param into the stack declaration above.
@@ -26,3 +27,27 @@ def dft_iterative_printer(graph: dict, origin: str) -> None:
 
 
 dft_iterative_printer(graph_adjacency_list, 'a')
+
+print('-' * 40)
+print('\n')
+print('-' * 40)
+
+counter = 0
+
+
+def dft_recursive_printer(graph: dict, node: str) -> None:
+    global counter
+    if (counter == 0):
+        print('Running the Depth First Traverse Recursive Function...')
+
+    counter += 1
+    # Utilize the python interpreters underlying call-stack instead of explicitly creating one
+    # Do the  function's action
+    print(node)
+    # Set up the recursive 'driver' mechanism
+    for neighbors in graph[node]:
+        # Call yourself again, this time with the current node as the node argument
+        dft_recursive_printer(graph, neighbors)
+
+
+dft_recursive_printer(graph_adjacency_list, 'a')
