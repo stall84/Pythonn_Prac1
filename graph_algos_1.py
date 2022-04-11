@@ -26,7 +26,7 @@ def dft_iterative_printer(graph: dict, origin: str) -> None:
             stack.append(neighbor)
 
 
-dft_iterative_printer(graph_adjacency_list, 'a')
+# dft_iterative_printer(graph_adjacency_list, 'a')
 
 print('-' * 40)
 print('\n')
@@ -50,4 +50,19 @@ def dft_recursive_printer(graph: dict, node: str) -> None:
         dft_recursive_printer(graph, neighbors)
 
 
-dft_recursive_printer(graph_adjacency_list, 'a')
+# dft_recursive_printer(graph_adjacency_list, 'a')
+
+
+# Breadth-First-Traversal Functions.
+# We'll utilize a queue-like structure with a List, removing the first-in element FIFO
+
+def bft_iterative_printer(graph: dict, node: str) -> None:
+    queue = [node]
+    while (len(queue) > 0):
+        current = queue.pop(0)
+        print(current)
+        for neighbor in graph[current]:
+            queue.append(neighbor)
+
+
+bft_iterative_printer(graph_adjacency_list, 'a')
