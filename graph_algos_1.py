@@ -65,4 +65,31 @@ def bft_iterative_printer(graph: dict, node: str) -> None:
             queue.append(neighbor)
 
 
-bft_iterative_printer(graph_adjacency_list, 'a')
+# bft_iterative_printer(graph_adjacency_list, 'a')
+
+# Map an undirected graph's edge-list (eL: [[nodes]]) to an adjacency list (aL: {node: [neighbors]})
+
+edge_list = [
+    ['i', 'j'],
+    ['k', 'i'],
+    ['m', 'k'],
+    ['k', 'l'],
+    ['o', 'n']
+]
+
+
+def graph_map(edgeList: list[str, str]) -> dict:
+    graph = {}
+    for edge in edgeList:
+        [a, b] = edge
+        if not (a in graph):
+            graph[a] = []
+        if not (b in graph):
+            graph[b] = []
+        graph[a].append(b)
+        graph[b].append(a)
+    return graph
+
+
+mapd_graph = graph_map(edge_list)
+print('mapd_graph : ', mapd_graph)
