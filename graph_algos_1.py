@@ -72,6 +72,7 @@ def bft_iterative_printer(graph: dict, node: str) -> None:
 edge_list = [
     ['i', 'j'],
     ['k', 'i'],
+    ['j', 'k'],
     ['m', 'k'],
     ['k', 'l'],
     ['o', 'n']
@@ -93,3 +94,15 @@ def graph_map(edgeList: list[str, str]) -> dict:
 
 mapd_graph = graph_map(edge_list)
 print('mapd_graph : ', mapd_graph)
+
+# Working with un-directed graphs still, we want to write our traversal algorithms again, but this time
+# we need to guard against getting stuck in a cycle.
+# The way we'll do this is by marking each node we visit as visited, and using logic to not attempt to re-visit
+# already-visited nodes
+
+
+# def cycle_guarded_dft(graph: any, source: str) -> None:
+#     stack = [source]
+#     visited =
+#     current = stack.pop(-1)
+#     for neighbor in graph[current]:
